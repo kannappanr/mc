@@ -443,6 +443,10 @@ func uploadSourceToTargetURL(ctx context.Context, urls URLs, progress io.Reader,
 		}
 		legalHold = urls.TargetContent.LegalHold
 	}
+	_, tagsPresent := urls.SourceContent.Metadata[AmzTaggingCount]
+	if tagsPresent {
+		delete(urls.SourceContent.Metadata, AmzTaggingCount)
+	}
 
 	for k, v := range urls.SourceContent.UserMetadata {
 		metadata[http.CanonicalHeaderKey(k)] = v

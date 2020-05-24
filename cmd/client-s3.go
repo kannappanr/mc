@@ -75,6 +75,7 @@ const (
 	fileHeaderType           = "fileheader"
 	commentCharType          = "commentchar"
 	typeJSONType             = "type"
+	AmzTaggingCount = "X-Amz-Tagging-Count"
 	// AmzObjectLockMode sets object lock mode
 	AmzObjectLockMode = "X-Amz-Object-Lock-Mode"
 	// AmzObjectLockRetainUntilDate sets object lock retain until date
